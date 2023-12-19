@@ -1,0 +1,244 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+nav {
+    margin-bottom: 40px;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    border-bottom: 2px solid black;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile h1 {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.info-card {
+    flex: 0.3; 
+    padding: 30px 20px; 
+    border: 1px solid #e0e0e0;
+    margin: 0 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none; 
+    color: inherit; 
+    transition: transform 0.3s; 
+}
+
+.info-card:hover {
+    transform: scale(1.05); 
+}
+
+.info-card h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.info-card p {
+    margin-top: 20px;
+}
+.study-page {
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.lmu-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4 {
+    margin: 15px 0;
+}
+
+.major, .minor {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li::before {
+    content: "➤";  /* 这是一个箭头符号，您可以根据需要更改 */
+    margin-right: 10px;
+}
+
+.work-experience {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.work-experience h2 {
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.experience {
+    margin-top: 20px;
+}
+
+.experience h3 {
+    color: #333;
+    font-size: 20px;
+}
+
+.experience h4 {
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.experience h5 {
+    font-size: 16px;
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.experience ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.experience ul li {
+    margin: 5px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.experience ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #333;
+}
+
+/* 如果您希望列表项有子弹样式，请保留上面的 ::before 样式 */
+
+/* 如果您想要与您之前的样式匹配的箭头，请使用以下的 ::before 样式 */
+.experience ul li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    color: #333;
+    margin-right: 10px;
+}
+
+.experience ul li ul li ::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #333;
+    margin-right: 10px;
+}
+
+
+.container {
+    max-width: 900px; /* Increased from 800px */
+    margin: auto;
+    padding: 20px;
+  }
+
+  .header {
+    font-size: 100px; /* Increased from 72px */
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.1;
+    position: absolute;
+    left: 50px;
+    top: 30px;
+  }
+
+  .about-section {
+    background-color: #f4f4f4;
+    margin-top: 120px; /* Slightly increased */
+    padding: 60px; /* Slightly increased */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added a subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+  }
+
+  .profile-pic {
+    float: left;
+    margin-right: 30px; /* Increased */
+    width: 250px; /* Increased */
+    border-radius: 8px; /* Rounded corners for the image */
+  }
+
+  .about-content {
+    overflow: hidden;
+  }
+
+  .about-title {
+    font-size: 30px; /* Increased */
+    margin-bottom: 30px; /* Increased */
+  }
+
+  .about-text {
+    font-size: 18px; /* Increased */
+    line-height: 1.8; /* Increased */
+    color: #444; /* Slightly darker font color */
+  }
+
+
+/* 添加这部分代码以确保样式整洁且响应式 */
+@media (max-width: 768px) {
+    .work-experience, .info-section {
+        width: 95%;
+    }
+
+    .info-card, .experience {
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+}
