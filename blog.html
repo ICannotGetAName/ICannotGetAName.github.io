@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-<title>My Blog</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Blog</title>
+    <script src="https://unpkg.com/i18next@21.6.4/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
 </head>
 <body>
     <nav>
@@ -18,12 +19,55 @@
         <button onclick="changeLanguage('zh')">中文</button>
     </nav>
 
+    <h1 class="ablog-text" id="blog_text"></h1>
 
+    <script>
+        function changeLanguage(lang) {
+            i18next.changeLanguage(lang, () => {
+                updateContent();
+            });
+        }
 
+        function updateContent() {
+            document.getElementById('nav_home').innerText = i18next.t('nav_home');
+            document.getElementById('nav_education').innerText = i18next.t('nav_education');
+            document.getElementById('nav_work_experience').innerText = i18next.t('nav_work_experience');
+            document.getElementById('nav_about_me').innerText = i18next.t('nav_about_me');
+            document.getElementById('nav_blog').innerText = i18next.t('nav_blog');
+            document.getElementById('blog_text').innerText = i18next.t('blog_text');
+        }
 
-<h1 class="ablog-text">
-    Still Updating...
-</h1>
-
+        i18next
+            .use(i18nextBrowserLanguageDetector)
+            .init({
+                debug: true,
+                fallbackLng: 'en',
+                resources: {
+                    en: {
+                        translation: {
+                            "nav_home": "HOME",
+                            "nav_education": "EDUCATION",
+                            "nav_work_experience": "WORK EXPERIENCE",
+                            "nav_about_me": "ABOUT ME",
+                            "nav_blog": "BLOG",
+                            "blog_text": "Still Updating..."
+                        }
+                    },
+                    zh: {
+                        translation: {
+                            "nav_home": "主页",
+                            "nav_education": "教育",
+                            "nav_work_experience": "工作经验",
+                            "nav_about_me": "关于我",
+                            "nav_blog": "博客",
+                            "blog_text": "仍在更新..."
+                        }
+                    }
+                }
+            }, function(err, t) {
+                if (err) return console.error(err);
+                updateContent();
+            });
+    </script>
 </body>
 </html>
