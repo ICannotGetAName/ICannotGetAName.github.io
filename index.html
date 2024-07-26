@@ -105,6 +105,14 @@
                 document.getElementById('about_title').innerText = i18next.t('about_title');
                 document.getElementById('about_text').innerText = i18next.t('about_text');
             }
+
+            function changeLanguage(language) {
+    i18next.changeLanguage(language, function(err, t) {
+        if (err) return console.error('Something went wrong loading', err);
+        updateContent();
+    });
+}
+
         </script>
     </body>
 </html>
