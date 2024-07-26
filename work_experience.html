@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work Experience</title>
+    <title id="page_title"></title>
     <link rel="stylesheet" href="styles.css"> <!-- Assuming your CSS file is named styles.css -->
+    <script src="https://unpkg.com/i18next@21.6.4/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
 </head>
 <body>
     <nav>
@@ -17,143 +19,150 @@
         <button onclick="changeLanguage('zh')">中文</button>
     </nav>
     <section class="work-experience">
-        <h2>Work Experience</h2>
-	    <div class="experience">
-            <h3>03.2024 - 08.2024  [Mercedes-Benz AG]</h3>
-            <h4>What’re my Tasks?</h4>
-            <ul>
-                <li>Support for SDM Data Center & SAP Basis</li>
-		<li>Reporting Tool</li>
-			<ul>
-			<li>Support for development of intern reporting tool</li>
-			<li>Carry out UX/UI design meetings</li>
-			<li>Carry out User Acceptance Testing and report to outsourcing colleagues</li>
-			<li>Develope different Dashborads with Excel</li>
-			</ul>
-		</li>
-		<li>Outsourcing Control Framework</li>
-			<ul>
-			<li>Support doing Finding analyse</li>
-			<li>Support soving Findings</li>
-			</ul>
-		</li>
-                <!-- Add more tasks here -->
-            </ul>
-            <h4>What did I learn?</h4>
-            <h5>“Hard Skills”</h5>
-            <ul>
-                <li>Advanced Excel skills such as pivot table & vlookup</li>
-		<li>UX/UI analyse skills</li>
-		<li>Data analyse</li>
-		<li>Doing presentation with different views</li>
-                <!-- Add more skills here -->
-            </ul>
-            <h5>“Soft Skills”</h5>
-            <ul>
-                <li>Communication skills regarding different topics with colleagues</li>
-		<li>Project organizing</li>
-                <!-- Add more skills here -->
-            </ul>
-        </div>
-
-<br>
-<br>	    
-        <div class="experience">
-            <h3>09.2023 - 12.2023  [Valeo GmbH]</h3>
-            <h4>What’re my Tasks?</h4>
-            <ul>
-                <li>Support for quality group and administrative group</li>
-		<li>Quality Group
-			<ul>
-			<li>Support for produce intern quality management Report</li>
-			<li>Support for produce claim report from BMW</li>
-			<li>Develop a Python data scrapping program help download over 20,000 rows of data</li>
-			</ul>
-		</li>
-		<li>Administrative Group
-			<ul>
-			<li>Help colleague to order Office Supplier like Laptop, headphone…</li>
-			<li>Support for intern Website management and updating</li>
-			<li>Courier Sign-off, send posts…</li>
-			</ul>
-		</li>
-                <!-- Add more tasks here -->
-            </ul>
-            <h4>What did I learn?</h4>
-            <h5>“Hard Skills”</h5>
-            <ul>
-                <li>Python Basic Knowledge</li>
-		<li>Selenium webdriver</li>
-		<li>Basic of third Party library Beautiful Soup 4</li>
-		<li>Basic of HTML and CSS</li>
-		<li>Prozess of data scrapping</li>
-		<li>Debug, Software testing…</li>
-                <!-- Add more skills here -->
-            </ul>
-            <h5>“Soft Skills”</h5>
-            <ul>
-                <li>Communication skills</li>
-		<li>Team Work</li>
-                <!-- Add more skills here -->
-            </ul>
-        </div>
-
-<br>
-<br>
+        <h2 id="section_title"></h2>
 
         <div class="experience">
-            <h3>09.2023 - 12.2023 [Ludwig-Maximilan-University]</h3>
-            <h4>What’re my Tasks?</h4>
+            <h3 id="experience_1_date"></h3>
+            <h4 id="experience_1_tasks_title"></h4>
             <ul>
-                <li>Participate in website management task of project "Mathematik der Vielteichen-Quantensysteme und ihrer kollektiven Phänomene"</li>
-		<li>Support for website management and documents modification</li>
-		<li>Use LMU intern CMS to manage website and use HTML and CSS editor to modify the part of required content like pictures, texts...</li>
-		<li>IT support on site with seminar streaming</li>
+                <li id="experience_1_task_1"></li>
+                <li id="experience_1_task_2">
+                    <ul>
+                        <li id="experience_1_task_2_subtask_1"></li>
+                        <li id="experience_1_task_2_subtask_2"></li>
+                        <li id="experience_1_task_2_subtask_3"></li>
+                        <li id="experience_1_task_2_subtask_4"></li>
+                    </ul>
+                </li>
+                <li id="experience_1_task_3">
+                    <ul>
+                        <li id="experience_1_task_3_subtask_1"></li>
+                        <li id="experience_1_task_3_subtask_2"></li>
+                    </ul>
+                </li>
                 <!-- Add more tasks here -->
             </ul>
-            <h4>What did I learn?</h4>
-            <h5>“Hard Skills”</h5>
+            <h4 id="experience_1_learned_title"></h4>
+            <h5 id="experience_1_hard_skills_title"></h5>
             <ul>
-                <li>Content Management System</li>
-		<li>Basic IT Hardware Knowdledge</li>
-		<li>Basic of HTML and CSS</li>
+                <li id="experience_1_hard_skill_1"></li>
+                <li id="experience_1_hard_skill_2"></li>
+                <li id="experience_1_hard_skill_3"></li>
+                <li id="experience_1_hard_skill_4"></li>
                 <!-- Add more skills here -->
             </ul>
-            <h5>“Soft Skills”</h5>
+            <h5 id="experience_1_soft_skills_title"></h5>
             <ul>
-                <li>Communication skills</li>
+                <li id="experience_1_soft_skill_1"></li>
+                <li id="experience_1_soft_skill_2"></li>
                 <!-- Add more skills here -->
             </ul>
         </div>
 
-<br>
-<br>
+        <!-- Add more experience sections here -->
 
-<div class="experience">
-            <h3>06.2023 - 09.2023[Maka Systems GmbH]</h3>
-            <h4>What’re my Tasks?</h4>
-            <ul>
-                <li>Support for ERP-System with Powerpoints and Words documentation</li>
-		<li>Support for production on site</li>
-		<li>Translation carried out orally and in writing in production department</li>
-		<li>Administrative Tasks</li>
-                <!-- Add more tasks here -->
-            </ul>
-            <h4>What did I learn?</h4>
-            <h5>“Hard Skills”</h5>
-            <ul>
-                <li>Translation Skills</li>
-		<li>MS Office</li>
-		<li>English & German and Chinese</li>
-                <!-- Add more skills here -->
-            </ul>
-            <h5>“Soft Skills”</h5>
-            <ul>
-                <li>Communication skills</li>
-		<li>Team Work</li>
-                <!-- Add more skills here -->
-            </ul>
-        </div>
     </section>
+
+    <script>
+        i18next
+            .use(i18nextBrowserLanguageDetector)
+            .init({
+                debug: true,
+                fallbackLng: 'en',
+                resources: {
+                    en: {
+                        translation: {
+                            "page_title": "Work Experience",
+                            "section_title": "Work Experience",
+                            "experience_1_date": "03.2024 - 08.2024 [Mercedes-Benz AG]",
+                            "experience_1_tasks_title": "What’re my Tasks?",
+                            "experience_1_task_1": "Support for SDM Data Center & SAP Basis",
+                            "experience_1_task_2": "Reporting Tool",
+                            "experience_1_task_2_subtask_1": "Support for development of intern reporting tool",
+                            "experience_1_task_2_subtask_2": "Carry out UX/UI design meetings",
+                            "experience_1_task_2_subtask_3": "Carry out User Acceptance Testing and report to outsourcing colleagues",
+                            "experience_1_task_2_subtask_4": "Develop different Dashboards with Excel",
+                            "experience_1_task_3": "Outsourcing Control Framework",
+                            "experience_1_task_3_subtask_1": "Support doing Finding analysis",
+                            "experience_1_task_3_subtask_2": "Support solving Findings",
+                            "experience_1_learned_title": "What did I learn?",
+                            "experience_1_hard_skills_title": "“Hard Skills”",
+                            "experience_1_hard_skill_1": "Advanced Excel skills such as pivot table & vlookup",
+                            "experience_1_hard_skill_2": "UX/UI analysis skills",
+                            "experience_1_hard_skill_3": "Data analysis",
+                            "experience_1_hard_skill_4": "Doing presentations with different views",
+                            "experience_1_soft_skills_title": "“Soft Skills”",
+                            "experience_1_soft_skill_1": "Communication skills regarding different topics with colleagues",
+                            "experience_1_soft_skill_2": "Project organizing",
+                            // Add more translations here
+                        }
+                    },
+                    zh: {
+                        translation: {
+                            "page_title": "工作经验",
+                            "section_title": "工作经验",
+                            "experience_1_date": "2024年3月 - 2024年8月 [梅赛德斯-奔驰股份公司]",
+                            "experience_1_tasks_title": "我的任务有哪些？",
+                            "experience_1_task_1": "支持SDM数据中心与SAP基础",
+                            "experience_1_task_2": "报告工具",
+                            "experience_1_task_2_subtask_1": "支持开发内部报告工具",
+                            "experience_1_task_2_subtask_2": "进行UX/UI设计会议",
+                            "experience_1_task_2_subtask_3": "进行用户验收测试并向外包同事报告",
+                            "experience_1_task_2_subtask_4": "使用Excel开发不同的仪表盘",
+                            "experience_1_task_3": "外包控制框架",
+                            "experience_1_task_3_subtask_1": "支持进行问题分析",
+                            "experience_1_task_3_subtask_2": "支持解决问题",
+                            "experience_1_learned_title": "我学到了什么？",
+                            "experience_1_hard_skills_title": "“硬技能”",
+                            "experience_1_hard_skill_1": "高级Excel技能，如数据透视表和vlookup",
+                            "experience_1_hard_skill_2": "UX/UI分析技能",
+                            "experience_1_hard_skill_3": "数据分析",
+                            "experience_1_hard_skill_4": "进行不同视角的演示",
+                            "experience_1_soft_skills_title": "“软技能”",
+                            "experience_1_soft_skill_1": "与同事就不同主题进行沟通的能力",
+                            "experience_1_soft_skill_2": "项目组织能力",
+                            // Add more translations here
+                        }
+                    }
+                }
+            }, function(err, t) {
+                if (err) console.error(err);
+                updateContent();
+            });
+
+        function updateContent() {
+            document.getElementById('page_title').innerText = i18next.t('page_title');
+            document.getElementById('section_title').innerText = i18next.t('section_title');
+
+            document.getElementById('experience_1_date').innerText = i18next.t('experience_1_date');
+            document.getElementById('experience_1_tasks_title').innerText = i18next.t('experience_1_tasks_title');
+            document.getElementById('experience_1_task_1').innerText = i18next.t('experience_1_task_1');
+            document.getElementById('experience_1_task_2').innerText = i18next.t('experience_1_task_2');
+            document.getElementById('experience_1_task_2_subtask_1').innerText = i18next.t('experience_1_task_2_subtask_1');
+            document.getElementById('experience_1_task_2_subtask_2').innerText = i18next.t('experience_1_task_2_subtask_2');
+            document.getElementById('experience_1_task_2_subtask_3').innerText = i18next.t('experience_1_task_2_subtask_3');
+            document.getElementById('experience_1_task_2_subtask_4').innerText = i18next.t('experience_1_task_2_subtask_4');
+            document.getElementById('experience_1_task_3').innerText = i18next.t('experience_1_task_3');
+            document.getElementById('experience_1_task_3_subtask_1').innerText = i18next.t('experience_1_task_3_subtask_1');
+            document.getElementById('experience_1_task_3_subtask_2').innerText = i18next.t('experience_1_task_3_subtask_2');
+            document.getElementById('experience_1_learned_title').innerText = i18next.t('experience_1_learned_title');
+            document.getElementById('experience_1_hard_skills_title').innerText = i18next.t('experience_1_hard_skills_title');
+            document.getElementById('experience_1_hard_skill_1').innerText = i18next.t('experience_1_hard_skill_1');
+            document.getElementById('experience_1_hard_skill_2').innerText = i18next.t('experience_1_hard_skill_2');
+            document.getElementById('experience_1_hard_skill_3').innerText = i18next.t('experience_1_hard_skill_3');
+            document.getElementById('experience_1_hard_skill_4').innerText = i18next.t('experience_1_hard_skill_4');
+            document.getElementById('experience_1_soft_skills_title').innerText = i18next.t('experience_1_soft_skills_title');
+            document.getElementById('experience_1_soft_skill_1').innerText = i18next.t('experience_1_soft_skill_1');
+            document.getElementById('experience_1_soft_skill_2').innerText = i18next.t('experience_1_soft_skill_2');
+            // Update additional experience sections similarly
+        }
+
+        function changeLanguage(language) {
+            i18next.changeLanguage(language, function(err, t) {
+                if (err) return console.error('Something went wrong loading', err);
+                updateContent();
+            });
+        }
+    </script>
 </body>
 </html>
