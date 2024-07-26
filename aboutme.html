@@ -5,17 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles.css">
 <title>About Me</title>
-
-</head>
+<script src="https://unpkg.com/i18next@21.6.4/dist/umd/i18next.min.js"></script>
+        <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+    </head>
 <body>
     <nav>
-        <a href="index.html">HOME</a>
-        <a href="study.html">EDUCATION</a>
-        <a href="work_experience.html">WORK EXPERIENCE</a>
-        <a href="aboutme.html">ABOUT ME</a>
-        <a href="blog.html">BLOG</a>
-        <button onclick="changeLanguage('en')">English</button>
-	<button onclick="changelanguage('zh')">中文</button>
+        <a href="index.html" id="nav_home"></a>
+            <a href="study.html" id="nav_education"></a>
+            <a href="work_experience.html" id="nav_work_experience"></a>
+            <a href="aboutme.html" id="nav_about_me"></a>
+            <a href="blog.html" id="nav_blog"></a>
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('zh')">中文</button>
     </nav>
 
 
