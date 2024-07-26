@@ -10,50 +10,49 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">HOME</a>
-        <a href="study.html">EDUCATION</a>
-        <a href="work_experience.html">WORK EXPERIENCE</a>
-        <a href="aboutme.html">ABOUT ME</a>
-	<a href="blog.html">BLOG</a>
-	<button onclick="changeLanguage('en')">English</button>
-	<button onclick="changeLanguage('zh')">中文</button>
+        <a href="index.html" id="nav_home"></a>
+            <a href="study.html" id="nav_education"></a>
+            <a href="work_experience.html" id="nav_work_experience"></a>
+            <a href="aboutme.html" id="nav_about_me"></a>
+            <a href="blog.html" id="nav_blog"></a>
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('zh')">中文</button>
     </nav>
-<div class="study-page">
-    <img src="lmu.png" alt="Ludwig-Maximilian-University Logo" class="lmu-logo">
-    <h1>Study at...</h1>
-    <h2>Ludwig-Maximilian-University</h2>
+	
+    <div class="study-page">
+   	 <img src="lmu.png" alt="Ludwig-Maximilian-University Logo" class="lmu-logo">
+    	 <h1 id="study_title"></h1>
+         <h2 id="uni_name"></h2>
 
     <section class="major">
-        <h2>Computer Science B.Sc. (Major)</h3>
-        <h3>Important Courses</h4>
-        <ul>
-            <li>Introduction to Programming</li>
-            <li>Algorithms and Data Structures</li>
-	    <li>Computer architecture</li>
-	    <li>Analysis</li>
-	    <li>Linear Algebra</li>
-	    <li>Logic and Discrete Structures</li>
-	    <li>Operating system</li>
-	    <li>Software technology</li>
+        <h2 id="major_name"></h3>
+        <h3 id="important_courses"></h4>
+        <ul id="my_list">
+            <li id="Introduction to Programming"></li>
+            <li id="Algorithms and Data Structures"></li>
+	    <li id="Computer architecture"></li>
+	    <li id="Higher Mathematics"></li>
+	    <li id="Operating system"></li>
+	    <li id="Software technology"></li>
             <!-- ...其他课程... -->
         </ul>
 
-        <h3>Professional knowledge</h4>
+        <h3 id="Professional knowledge"></h4>
         <ul>
-            <li>Java</li>
-            <li>Haskell</li>
-	    <li>Algorithms and Data structures</li>
-	    <li>Mathematics</li>
-	    <li>Software Engineering</li>
+            <li id="Java"></li>
+            <li id="Haskell"></li>
+	    <li id="Algorithms and Data structures"></li>
+	    <li id="Mathematics"></li>
+	    <li id="Software Engineering"></li>
             <!-- ...其他知识点... -->
         </ul>
     </section>
 
     <section class="minor">
-        <h2>Business Management B.A. (Minor)</h3>
-        <h3>Important Courses</h4>
-        <ul>
-            <li>Fundamentals of Business Management</li>
+        <h2 id="minor_name"></h3>
+        <h3 id="important_courses"></h4>
+        <ul id="mylist">
+            <li id="Fundamentals of Business Management"></li>
             <!-- ...其他课程... -->
         </ul>
     </section>
@@ -74,14 +73,24 @@
                                 "nav_work_experience": "WORK EXPERIENCE",
                                 "nav_about_me": "ABOUT ME",
                                 "nav_blog": "BLOG",
-                                "profile_title": "Here is Xinrui Jonas Wang!",
-                                "download_cv": "Download CV",
                                 "study_title": "Study at...",
-                                "study_text": "Ludwig-Maximilian-University",
-                                "work_title": "Work as...",
-                                "work_text": "Internship in Mercedes-Benz AG",
-                                "about_title": "About Me...",
-                                "about_text": "Click here to learn more about me"
+			        "uni_name":"Ludwig-Maximilian-University",
+				"major_name": "Computer Science B.Sc. (Major)",
+				"important_courses": "Important courses",
+				"Software technology":"Software technology",
+				"Introduction to Programming":"Introduction to Programming",
+				"Algorithms and Data Structures":"Algorithms and Data Structures",
+				"Higher Mathematics":"Higher Mathematics",
+				"Operating system":"Operating system",
+				"Professional knowledge":"Professional knowledge",
+				"Java":"Java",
+				"Haskell":"Haskell",
+				"Algorithms and Data structures":"Algorithms and Data structures",
+				"Mathematics":"Mathematics",
+				"Software Engineering":"Software Engineering"
+				"minor_name":"Business Management B.A. (Minor)",
+				"Fundamentals of Business Management":"Fundamentals of Business Management 1&2"
+				
                             }
                         },
                         zh: {
@@ -94,11 +103,22 @@
                                 "profile_title": "这里是王鑫瑞！",
                                 "download_cv": "下载简历",
                                 "study_title": "就读于...",
-                                "study_text": "慕尼黑大学",
-                                "work_title": "工作于...",
-                                "work_text": "梅赛德斯-奔驰公司",
-                                "about_title": "关于我...",
-                                "about_text": "点击这里了解更多关于我的信息"
+                                "uni_name":"慕尼黑大学",
+				"major_name": "计算机学士（主修）“，
+				"important_courses":"重要课程",
+				"Software technology":"软件工程",
+				"Introduction to Programming":"编程导论",
+				"Algorithms and Data Structures":"算法和数据结构",
+				"Higher Mathematics":"高等数学",
+				"Operating system":"操作系统",
+				"Professional knowledge":"专业技能",
+				"Java":"Java编程",
+				"Haskell":"Haskell编程",
+				"Algorithms and Data structures":"算法和数据结构",
+				"Mathematics":"数学",
+				"Software Engineering":"软件工程"
+				"minor_name":"企业管理（辅修）",
+				"Fundamentals of Business Management":"企业管理基础1&2"
                             }
                         }
                     }
@@ -115,11 +135,24 @@
                 document.getElementById('profile_title').innerText = i18next.t('profile_title');
                 document.getElementById('download_cv').innerText = i18next.t('download_cv');
                 document.getElementById('study_title').innerText = i18next.t('study_title');
-                document.getElementById('study_text').innerText = i18next.t('study_text');
-                document.getElementById('work_title').innerText = i18next.t('work_title');
-                document.getElementById('work_text').innerText = i18next.t('work_text');
-                document.getElementById('about_title').innerText = i18next.t('about_title');
-                document.getElementById('about_text').innerText = i18next.t('about_text');
+                document.getElementById('uni_name').innerText = i18next.t('uni_name');
+                document.getElementById('major_name').innerText = i18next.t('major_name');
+                document.getElementById('important_courses').innerText = i18next.t('important_courses');
+                document.getElementById('Software technology').innerText = i18next.t('Software technology');
+                document.getElementById('Introduction to Programming').innerText = i18next.t('Introduction to Programming');
+                document.getElementById('Algorithms and Data Structures').innerText = i18next.t('Algorithms and Data Structures');
+                document.getElementById('Higher Mathematics').innerText = i18next.t('Higher Mathematics');
+                document.getElementById('Operating system').innerText = i18next.t('Operating system');
+                document.getElementById('Professional knowledge').innerText = i18next.t('Professional knowledge');
+                document.getElementById('Java').innerText = i18next.t('Java');
+                document.getElementById('Haskell').innerText = i18next.t('Haskell');
+                document.getElementById('Algorithms and Data structures').innerText = i18next.t('Algorithms and Data structures');
+                document.getElementById('Mathematics').innerText = i18next.t('Mathematics');
+                document.getElementById('Software Engineering').innerText = i18next.t('Software Engineering');
+                document.getElementById('minor_name').innerText = i18next.t('minor_name');
+                document.getElementById('Fundamentals of Business Management').innerText = i18next.t('Fundamentals of Business Management');
+
+
             }
 
             function changeLanguage(language) {
