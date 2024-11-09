@@ -145,6 +145,17 @@
         </div>
     </section>
 
+    <div class="container">
+        <div class="about-section">
+            <img src="../images/pic.jpg" alt="Profile Picture" class="profile-pic">
+            <div>
+                <h1 id="about_title"></h1>
+                <p id="about1"></p>
+                <p id="about2"></p>
+            </div>
+        </div>
+    </div>
+
     <script>
         i18next
             .use(i18nextBrowserLanguageDetector)
@@ -154,27 +165,63 @@
                 resources: {
                     en: {
                         translation: {
-                            "page_title": "Work Experience",
-                            "section_title": "Work Experience",
-                            "experience_1_date": "03.2024 - 08.2024 [Mercedes-Benz AG]",
-                            "experience_1_tasks_title": "What’re my Tasks?",
-                            "experience_1_task_1": "Support for SDM Data Center & SAP Basis",
-                            "experience_1_task_2": "Reporting Tool",
-                            "experience_1_task_2_subtask_1": "Support for development of intern reporting tool",
-                            "experience_1_task_2_subtask_2": "Carry out UX/UI design meetings",
-                            "experience_1_task_2_subtask_3": "Carry out User Acceptance Testing and report to outsourcing colleagues",
-                            "experience_1_task_2_subtask_4": "Develop different Dashboards with Excel",
-                            "experience_1_task_3": "Outsourcing Control Framework",
-                            "experience_1_task_3_subtask_1": "Support doing Finding analysis",
-                            "experience_1_task_3_subtask_2": "Support solving Findings",
-                            "experience_1_learned_title": "What did I learn?",
-                            "experience_1_hard_skills_title": "“Hard Skills”",
-                            "experience_1_hard_skill_1": "Advanced Excel skills such as pivot table & vlookup",
-                            "experience_1_hard_skill_2": "UX/UI analysis skills",
-                            "experience_1_hard_skill_3": "Data analysis",
-                            "experience_1_hard_skill_4": "Doing presentations with different views",
-                            "experience_1_soft_skills_title": "“Soft Skills”",
-                            "experience_1_soft_skill_1": "Communication skills regarding different topics with colleagues",
-                            "experience_1_soft_skill_2": "Project organizing",
-                            
+                            "nav_home": "HOME",
+                            "nav_education": "EDUCATION",
+                            "nav_work_experience": "WORK EXPERIENCE",
+                            "nav_about_me": "ABOUT ME",
+                            "nav_blog": "BLOG",
+                            "profile_title": "Here is Xinrui Jonas Wang!",
+                            "download_cv": "Download CV",
+                            "study_title": "Study at...",
+                            "study_text": "Ludwig-Maximilian-University",
+                            "work_title": "Work as...",
+                            "work_text": "Internship in Mercedes-Benz AG",
+                            "about_title": "About Me...",
+                            "about_text": "Click here to learn more about me",
+                            "about1": "As you already know, I am a Student in LMU, who studies Computer Science. But I'm not kind of nerd... Actually, I'd say I'm an interesting young man myself.",
+                            "about2": "I have lots of hobbies like cycling, boxing, reading, programming... Unfortunately, or maybe fortunately, studying is not one of my hobbies :)"
+                        }
+                    },
+                    zh: {
+                        translation: {
+                            "nav_home": "主页",
+                            "nav_education": "教育",
+                            "nav_work_experience": "工作经验",
+                            "nav_about_me": "关于我",
+                            "nav_blog": "博客",
+                            "profile_title": "这里是王鑫瑞！",
+                            "download_cv": "下载简历",
+                            "study_title": "就读于...",
+                            "study_text": "慕尼黑大学",
+                            "work_title": "工作于...",
+                            "work_text": "梅赛德斯-奔驰公司",
+                            "about_title": "关于我...",
+                            "about_text": "点击这里了解更多关于我的信息",
+                            "about1": "GOOD GOOD",
+                            "about2": "💁还是看英文版吧"
+                        }
+                    }
+                }
+            }, function(err, t) {
+                updateContent();
+            });
+
+        function updateContent() {
+            document.getElementById('nav_home').innerText = i18next.t('nav_home');
+            document.getElementById('nav_education').innerText = i18next.t('nav_education');
+            document.getElementById('nav_work_experience').innerText = i18next.t('nav_work_experience');
+            document.getElementById('nav_about_me').innerText = i18next.t('nav_about_me');
+            document.getElementById('nav_blog').innerText = i18next.t('nav_blog');
+            document.getElementById('about_title').innerText = i18next.t('about_title');
+            document.getElementById('about1').innerText = i18next.t('about1');
+            document.getElementById('about2').innerText = i18next.t('about2');
+        }
+
+        function changeLanguage(language) {
+            i18next.changeLanguage(language, function(err, t) {
+                if (err) return console.error('Something went wrong loading', err);
+                updateContent();
+            });
+        }
+    </script>
                             "
