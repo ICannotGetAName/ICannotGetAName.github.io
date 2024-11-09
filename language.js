@@ -53,7 +53,25 @@ i18next
                                 "work_title": "工作于...",
                                 "work_text": "梅赛德斯-奔驰公司",
                                 "about_title": "关于我...",
-                                "about_text": "点击这里了解更多关于我的信息"
+                                "about_text": "点击这里了解更多关于我的信息",
+                              "uni_name": "慕尼黑大学",
+                            "major_name": "计算机学士（主修）",
+                            "important_courses": "重要课程",
+                            "Introduction_to_Programming": "编程导论",
+                            "Algorithms_and_Data_Structures": "算法和数据结构",
+                            "Computer_architecture": "计算机体系结构",
+                            "Higher_Mathematics": "高等数学",
+                            "Operating_system": "操作系统",
+                            "Software_technology": "软件技术",
+                            "Professional_knowledge": "专业知识",
+                            "Java": "Java",
+                            "Haskell": "Haskell",
+                            "Algorithms_and_Data_structures": "算法和数据结构",
+                            "Mathematics": "数学",
+                            "Software_Engineering": "软件工程",
+                            "minor_name": "企业管理（辅修）",
+                            "important_courses_minor": "重要课程",
+                            "Fundamentals_of_Business_Management": "企业管理基础 1&2"
                             }
                         }
                     }
