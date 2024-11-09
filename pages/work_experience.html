@@ -32,50 +32,56 @@
 
     <script>
         i18next
-            .use(i18nextBrowserLanguageDetector)
-            .init({
-                debug: true,
-                fallbackLng: 'en',
-                resources: {
-                    en: {
-                        translation: {
-                            "nav_home": "HOME",
-                            "nav_education": "EDUCATION",
-                            "nav_work_experience": "WORK EXPERIENCE",
-                            "nav_about_me": "ABOUT ME",
-                            "nav_blog": "BLOG",
-                            "section_title":"My Work Expierence",
-                            "mercedes_benz_internship":"Internship in Mercedes-Benz AG",
-                            "mercedes_benz_tasks":"My Tasks in Mercedes-Benz AG",
-                            "tasks mercedes":"I was working for ITT/FD(IT Digital Foundation) Department as an intern in group IT Service Delivery Managment. 
-                                I was mostly responsible for UI/UX Design and also supported internal reporting tool developement. 
-                                Beside that, I was also responsible for the first round of User Acceptance Test of our project reporting tool.
-                                Last but not the least, I also began our new project -- Operating Model intergration.",
-                            "mercedes_benz_skills":"Skills I learn",
-                            "skills mercedes":"One of the most important skill is communication skill. 
-                                Especially with our outsourced colleagues who are responsible for our project.
-                                Beside that, I have also learned skills like project managment, UI/UX, professional Coding & Excel Skills."
-                        }
-                    },
-                    zh: {
-                        translation: {
-                            "nav_home": "主页",
-                            "nav_education": "教育",
-                            "nav_work_experience": "工作经验",
-                            "nav_about_me": "关于我",
-                            "nav_blog": "博客",
-                            "section_title":"My Work Expierence",
-                            "mercedes_benz_internship":"Internship in Mercedes-Benz AG",
-                            "mercedes_benz_tasks":"",
-                            "tasks mercedes":"A",
-                            "mercedes_benz_skills":"A",
-                            "skills mercedes":"A"
-                        }
-                    }
+    .use(i18nextBrowserLanguageDetector)
+    .init({
+        debug: true,
+        fallbackLng: 'en',
+        resources: {
+            en: {
+                translation: {
+                    "nav_home": "HOME",
+                    "nav_education": "EDUCATION",
+                    "nav_work_experience": "WORK EXPERIENCE",
+                    "nav_about_me": "ABOUT ME",
+                    "nav_blog": "BLOG",
+                    "section_title": "My Work Experience",
+                    "mercedes_benz_internship": "Internship in Mercedes-Benz AG",
+                    "mercedes_benz_tasks": "My Tasks in Mercedes-Benz AG",
+                    "tasks mercedes": `I was working for ITT/FD (IT Digital Foundation) Department as an intern in the group IT Service Delivery Management. 
+I was mostly responsible for UI/UX Design and also supported internal reporting tool development. 
+Besides that, I was also responsible for the first round of User Acceptance Test of our project reporting tool.
+Last but not least, I also began our new project -- Operating Model integration.`,
+                    "mercedes_benz_skills": "Skills I learned",
+                    "skills mercedes": `One of the most important skills is communication. 
+Especially with our outsourced colleagues who are responsible for our project.
+Besides that, I have also learned skills like project management, UI/UX, professional coding, and Excel skills.`
                 }
-            }, function(err, t) {
-                updateContent();
-            });
+            },
+            zh: {
+                translation: {
+                    "nav_home": "主页",
+                    "nav_education": "教育",
+                    "nav_work_experience": "工作经验",
+                    "nav_about_me": "关于我",
+                    "nav_blog": "博客",
+                    "section_title": "我的工作经历",
+                    "mercedes_benz_internship": "在梅赛德斯-奔驰公司实习",
+                    "mercedes_benz_tasks": "我在梅赛德斯-奔驰的任务",
+                    "tasks mercedes": `我在 ITT/FD（IT 数字基础）部门担任实习生，负责 IT 服务交付管理团队。
+我的主要任务是 UI/UX 设计，并支持内部报告工具的开发。
+此外，我还负责我们项目报告工具的第一轮用户验收测试。
+最后，我还开始了我们的新项目——操作模式集成。`,
+                    "mercedes_benz_skills": "我学到的技能",
+                    "skills mercedes": `其中最重要的技能是沟通能力。
+尤其是在与负责我们项目的外包同事合作时。
+此外，我还学习了项目管理、UI/UX、专业编程和 Excel 技能。`
+                }
+            }
+        }
+    }, function(err, t) {
+        updateContent();
+    });
+
 
         function updateContent() {
             document.getElementById('nav_home').innerText = i18next.t('nav_home');
@@ -98,4 +104,3 @@
             });
         }
     </script>
-                            "
