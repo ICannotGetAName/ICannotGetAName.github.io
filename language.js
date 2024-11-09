@@ -93,6 +93,24 @@ i18next
                 document.getElementById('work_text').innerText = i18next.t('work_text');
                 document.getElementById('about_title').innerText = i18next.t('about_title');
                 document.getElementById('about_text').innerText = i18next.t('about_text');
+              document.getElementById('uni_name').innerText = i18next.t('uni_name');
+            document.getElementById('major_name').innerText = i18next.t('major_name');
+            document.getElementById('important_courses').innerText = i18next.t('important_courses');
+            document.getElementById('Introduction_to_Programming').innerText = i18next.t('Introduction_to_Programming');
+            document.getElementById('Algorithms_and_Data_Structures').innerText = i18next.t('Algorithms_and_Data_Structures');
+            document.getElementById('Computer_architecture').innerText = i18next.t('Computer_architecture');
+            document.getElementById('Higher_Mathematics').innerText = i18next.t('Higher_Mathematics');
+            document.getElementById('Operating_system').innerText = i18next.t('Operating_system');
+            document.getElementById('Software_technology').innerText = i18next.t('Software_technology');
+            document.getElementById('Professional_knowledge').innerText = i18next.t('Professional_knowledge');
+            document.getElementById('Java').innerText = i18next.t('Java');
+            document.getElementById('Haskell').innerText = i18next.t('Haskell');
+            document.getElementById('Algorithms_and_Data_structures').innerText = i18next.t('Algorithms_and_Data_structures');
+            document.getElementById('Mathematics').innerText = i18next.t('Mathematics');
+            document.getElementById('Software_Engineering').innerText = i18next.t('Software_Engineering');
+            document.getElementById('minor_name').innerText = i18next.t('minor_name');
+            document.getElementById('important_courses_minor').innerText = i18next.t('important_courses_minor');
+            document.getElementById('Fundamentals_of_Business_Management').innerText = i18next.t('Fundamentals_of_Business_Management');
             }
 
             function changeLanguage(language) {
