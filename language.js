@@ -18,7 +18,25 @@ i18next
                                 "work_title": "Work as...",
                                 "work_text": "Internship in Mercedes-Benz AG",
                                 "about_title": "About Me...",
-                                "about_text": "Click here to learn more about me"
+                                "about_text": "Click here to learn more about me",
+                              "uni_name": "Ludwig-Maximilian-University",
+                            "major_name": "Computer Science B.Sc. (Major)",
+                            "important_courses": "Important courses",
+                            "Introduction_to_Programming": "Introduction to Programming",
+                            "Algorithms_and_Data_Structures": "Algorithms and Data Structures",
+                            "Computer_architecture": "Computer architecture",
+                            "Higher_Mathematics": "Higher Mathematics",
+                            "Operating_system": "Operating system",
+                            "Software_technology": "Software technology",
+                            "Professional_knowledge": "Professional knowledge",
+                            "Java": "Java",
+                            "Haskell": "Haskell",
+                            "Algorithms_and_Data_structures": "Algorithms and Data structures",
+                            "Mathematics": "Mathematics",
+                            "Software_Engineering": "Software Engineering",
+                            "minor_name": "Business Management B.A. (Minor)",
+                            "important_courses_minor": "Important courses",
+                            "Fundamentals_of_Business_Management": "Fundamentals of Business Management 1&2"
                             }
                         },
                         zh: {
