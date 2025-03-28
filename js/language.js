@@ -5,7 +5,7 @@ i18next
     debug: true,
     fallbackLng: 'en',
     backend: {
-      loadPath: '../locales/{{lng}}.json'
+      loadPath: 'locales/{{lng}}.json'  // ← 注意这里没有 "../"，因为 index.html 在根目录
     }
   }, function(err, t) {
     updateContent();
@@ -21,7 +21,7 @@ function updateContent() {
 
 function changeLanguage(language) {
   i18next.changeLanguage(language, function (err, t) {
-    if (err) return console.error('Something went wrong loading', err);
+    if (err) return console.error('Language loading error:', err);
     updateContent();
   });
 }
