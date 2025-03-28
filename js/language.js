@@ -14,10 +14,13 @@ i18next
 function updateContent() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    const value = i18next.t(key);
-    if (value) el.innerText = value;
+    const value = i18next.t(key); // 获取翻译内容
+    if (value) {
+      el.innerText = value; // 更新文本
+    }
   });
 }
+
 
 function changeLanguage(language) {
   i18next.changeLanguage(language, function (err, t) {
