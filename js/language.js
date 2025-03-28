@@ -1,11 +1,11 @@
 i18next
-  .use(i18nextHttpBackend) // ← 你可能忘了这一行！
+  .use(i18nextHttpBackend)
   .use(i18nextBrowserLanguageDetector)
   .init({
     debug: true,
     fallbackLng: 'en',
     backend: {
-      loadPath: 'locales/{{lng}}.json' // ← 这个路径对 index.html 是正确的
+      loadPath: '../locales/{{lng}}.json' // ← 路径从 pages/ 下跳出去
     }
   }, function(err, t) {
     updateContent();
