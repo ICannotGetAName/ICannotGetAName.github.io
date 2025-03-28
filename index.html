@@ -45,5 +45,16 @@
         </div>
 
         <script src = "language.js"></script>
+        <footer style="text-align: center; padding: 1rem; font-size: 0.9rem; color: gray;">
+  <p>&copy; 2025 Xinrui Jonas Wang | Last updated: <span id="current-date"></span></p>
+</footer>
+
+<script>
+  const dateEl = document.getElementById('current-date');
+  const now = new Date();
+  const formatted = now.toLocaleDateString('en-CA'); // 格式：2025-03-28
+  dateEl.textContent = formatted;
+</script>
+
     </body>
 </html>
