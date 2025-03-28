@@ -205,17 +205,44 @@ li::before {
     flex-basis: 100%;
   }
 
-  /* Additional styling for cards */
   .card-box {
-    width: 100%; /* Make cards take up full width on smaller screens */
-    padding: 15px;
-  }
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px; /* 拉长方框的宽度 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 将内容从上方开始对齐 */
+  align-items: flex-start; /* 让内容左对齐 */
+}
 
-  .card-box h3 {
-    font-size: 18px; /* Slightly smaller font on mobile */
-  }
+.card-box:hover {
+  transform: translateY(-5px); /* 鼠标悬停时微微上升 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 增强阴影 */
+}
 
-  .card-box p {
-    font-size: 14px; /* Adjust text size for mobile */
-  }
+.card-box h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: left; /* 确保标题左对齐 */
+}
+
+.card-box p {
+  font-size: 16px;
+  color: #777;
+  margin-top: 0;
+  text-align: left; /* 确保描述文字左对齐 */
+}
+
+/* 取消边框 */
+.card-box:focus, .card-box:active {
+  outline: none;
+}
+
+.card-box + .card-box {
+  margin-left: 20px;
 }
