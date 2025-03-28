@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css"> <!-- 引用CSS -->
+    <title>Study at Ludwig-Maximilian-University</title>
+    <script src="https://unpkg.com/i18next@21.6.4/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="../index.html" id="nav_home" data-i18n="nav_home"></a>
+        <a href="study.html" id="nav_education" data-i18n="nav_education"></a>
+        <a href="work_experience.html" id="nav_work_experience" data-i18n="nav_work_experience"></a>
+        <a href="aboutme.html" id="nav_about_me" data-i18n="nav_about_me"></a>
+        <a href="blog.html" id="nav_blog" data-i18n="nav_blog"></a>
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('zh')">中文</button>
+    </nav>
+	
+    <div class="study-page">
+        <img src="../images/lmu.png" alt="Ludwig-Maximilian-University Logo" class="lmu-logo">
+        <h1 id="study_title" data-i18n="study_title"></h1>
+        <h2 id="uni_name" data-i18n="uni_name"></h2>
+
+        <section class="major">
+            <h2 id="major_name" data-i18n="major_name"></h2>
+            <h3 id="important_courses" data-i18n="important_courses"></h3>
+            <ul id="my_list">
+                <li id="Introduction_to_Programming" data-i18n="Introduction_to_Programming"></li>
+                <li id="Algorithms_and_Data_Structures" data-i18n="Algorithms_and_Data_Structures"></li>
+                <li id="Computer_architecture" data-i18n="Computer_architecture"></li>
+                <li id="Higher_Mathematics" data-i18n="Higher_Mathematics"></li>
+                <li id="Operating_system" data-i18n="Operating_system"></li>
+                <li id="Software_technology" data-i18n="Software_technology"></li>
+            </ul>
+
+            <h3 id="Professional_knowledge" data-i18n="Professional_knowledge"></h3>
+            <ul>
+                <li id="Java" data-i18n="Java"></li>
+                <li id="Haskell" data-i18n="Haskell"></li>
+                <li id="Algorithms_and_Data_structures" data-i18n="Algorithms_and_Data_structures"></li>
+                <li id="Mathematics" data-i18n="Mathematics"></li>
+                <li id="Software_Engineering" data-i18n="Software_Engineering"></li>
+            </ul>
+        </section>
+
+        <section class="minor">
+            <h2 id="minor_name" data-i18n="minor_name"></h2>
+            <h3 id="important_courses_minor" data-i18n="important_courses_minor"></h3>
+            <ul id="mylist">
+                <li id="Fundamentals_of_Business_Management" data-i18n="Fundamentals_of_Business_Management"></li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="../language.js"></script> <!-- 引用 language.js -->
+</body>
+</html>

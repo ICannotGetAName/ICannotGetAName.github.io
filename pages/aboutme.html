@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>About Me</title>
+    <script src="https://unpkg.com/i18next@21.6.4/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="../index.html" id="nav_home"></a>
+        <a href="study.html" id="nav_education"></a>
+        <a href="work_experience.html" id="nav_work_experience"></a>
+        <a href="aboutme.html" id="nav_about_me"></a>
+        <a href="blog.html" id="nav_blog"></a>
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('zh')">中文</button>
+    </nav>
+
+    <div class="container">
+        <div class="about-section">
+            <img src="../images/pic.jpg" alt="Profile Picture" class="profile-pic">
+            <div>
+                <h1 id="about_title"></h1>
+                <p id="about1"></p>
+                <p id="about2"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        i18next
+            .use(i18nextBrowserLanguageDetector)
+            .init({
+                debug: true,
+                fallbackLng: 'en',
+                resources: {
+                    en: {
+                        translation: {
+                            "nav_home": "HOME",
+                            "nav_education": "EDUCATION",
+                            "nav_work_experience": "WORK EXPERIENCE",
+                            "nav_about_me": "ABOUT ME",
+                            "nav_blog": "BLOG",
+                            "profile_title": "Here is Xinrui Jonas Wang!",
+                            "download_cv": "Download CV",
+                            "study_title": "Study at...",
+                            "study_text": "Ludwig-Maximilian-University",
+                            "work_title": "Work as...",
+                            "work_text": "Internship in Mercedes-Benz AG",
+                            "about_title": "About Me...",
+                            "about_text": "Click here to learn more about me",
+                            "about1": "As you already know, I am a Student in LMU, who studies Computer Science. But I'm not kind of nerd... Actually, I'd say I'm an interesting young man myself.",
+                            "about2": "I have lots of hobbies like cycling, boxing, reading, programming... Unfortunately, or maybe fortunately, studying is not one of my hobbies :)"
+                        }
+                    },
+                    zh: {
+                        translation: {
+                            "nav_home": "主页",
+                            "nav_education": "教育",
+                            "nav_work_experience": "工作经验",
+                            "nav_about_me": "关于我",
+                            "nav_blog": "博客",
+                            "profile_title": "这里是王鑫瑞！",
+                            "download_cv": "下载简历",
+                            "study_title": "就读于...",
+                            "study_text": "慕尼黑大学",
+                            "work_title": "工作于...",
+                            "work_text": "梅赛德斯-奔驰公司",
+                            "about_title": "关于我...",
+                            "about_text": "点击这里了解更多关于我的信息",
+                            "about1": "GOOD GOOD",
+                            "about2": "💁还是看英文版吧"
+                        }
+                    }
+                }
+            }, function(err, t) {
+                updateContent();
+            });
+
+        function updateContent() {
+            document.getElementById('nav_home').innerText = i18next.t('nav_home');
+            document.getElementById('nav_education').innerText = i18next.t('nav_education');
+            document.getElementById('nav_work_experience').innerText = i18next.t('nav_work_experience');
+            document.getElementById('nav_about_me').innerText = i18next.t('nav_about_me');
+            document.getElementById('nav_blog').innerText = i18next.t('nav_blog');
+            document.getElementById('about_title').innerText = i18next.t('about_title');
+            document.getElementById('about1').innerText = i18next.t('about1');
+            document.getElementById('about2').innerText = i18next.t('about2');
+        }
+
+        function changeLanguage(language) {
+            i18next.changeLanguage(language, function(err, t) {
+                if (err) return console.error('Something went wrong loading', err);
+                updateContent();
+            });
+        }
+    </script>
+</body>
+</html>
