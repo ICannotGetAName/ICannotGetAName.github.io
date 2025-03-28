@@ -231,24 +231,37 @@ li::before {
     margin: 0.5rem 0;
 }
 
-/* 卡片基础样式（也可以保留在 inline 中） */
 .card-box {
-  width: 200px;
-  height: 100px;
-  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
   text-align: center;
-  padding-top: 1rem;
-  color: black;
-  background-color: white;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* 鼠标悬停时的动画效果 */
 .card-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-box h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-box p {
+  font-size: 16px;
+  color: #777;
+  margin: 0;
+}
+
+/* 添加卡片之间的间距 */
+.card-box + .card-box {
+  margin-left: 20px;
 }
 
 
