@@ -227,6 +227,40 @@ li::before {
   text-align: left;
 }
 
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap; /* 小屏幕时换行 */
+}
+
+.profile-pic {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-section div {
+  max-width: 600px;
+}
+
+.about-section h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+}
+
 @media (max-width: 768px) {
   .work-experience, .info-section {
     width: 95%;
