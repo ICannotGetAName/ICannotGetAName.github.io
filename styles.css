@@ -1,0 +1,178 @@
+/* Default navigation styles */
+nav {
+  display: flex;
+  justify-content: space-around; /* items evenly distributed */
+  padding: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  padding: 10px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* vertical on small screens */
+    align-items: center;
+  }
+
+  nav a {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+}
+
+/* Page default */
+body {
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+nav { margin-bottom: 40px; }
+
+nav a { margin: 0 20px; text-decoration: none; color: black; padding: 5px 10px; border-bottom: 2px solid transparent; }
+nav a:hover { border-bottom: 2px solid black; }
+
+.profile { text-align: center; }
+
+.profile img, .profile-pic { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; }
+
+.profile h1 { margin: 20px 0; }
+
+button { padding: 10px 20px; background-color: black; color: white; border: none; cursor: pointer; transition: background-color 0.3s; }
+button:hover { background-color: #333; }
+
+.info-section { display: flex; justify-content: center; gap: 20px; width: 100%; margin: 40px 0; }
+
+.info-card {
+  /* remove outer box so only the inner .card-box shows */
+  flex: 0.3;
+  margin: 0 15px;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  transition: transform 0.15s ease;
+}
+.info-card:hover { transform: none; }
+.info-card h2 { margin-top: 0; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; }
+.info-card p { margin-top: 20px; }
+
+/* Study page improvements */
+.study-page {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 36px 28px;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(180deg, rgba(250,250,250,0.7), rgba(245,245,245,0.7));
+  border-radius: 12px;
+}
+
+.study-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.lmu-logo {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.uni-name {
+  font-size: 20px;
+  color: #222;
+  margin: 0;
+}
+
+.study-intro {
+  color: #444;
+  margin-top: 6px;
+}
+
+h1,h2,h3,h4 { margin: 15px 0; }
+
+/* make major/minor sections into cards */
+.major, .minor {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 22px;
+  margin-top: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.section-title {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #111;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.course-list li {
+  list-style: none;
+  padding-left: 0;
+  color: #333;
+}
+
+.course-list li::before {
+  content: "•";
+  color: #888;
+  display: inline-block;
+  width: 18px;
+  margin-right: 8px;
+}
+
+.work-experience { width: 80%; margin: 50px auto; padding: 20px; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.work-experience h2 { text-align: center; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; }
+.experience { margin-top: 20px; }
+.experience h3 { color: #333; font-size: 20px; }
+.experience h4 { font-size: 18px; color: #666; margin-top: 20px; }
+.experience h5 { font-size: 16px; color: #666; margin-top: 15px; margin-bottom: 10px; }
+.experience ul { list-style-type: none; padding: 0; }
+.experience ul li { margin: 5px 0; position: relative; padding-left: 20px; }
+.experience ul li::before { content: "➤"; position: absolute; left: 0; color: #333; margin-right: 10px; }
+
+.card-box { background-color: #fff; border-radius: 10px; padding: 20px; width: 300px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+.card-box:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+.card-box h3 { font-size: 20px; font-weight: bold; margin-bottom: 10px; color: #333; text-align: left; }
+.card-box p { font-size: 16px; color: #777; margin-top: 0; text-align: left; }
+
+.about-section { display: flex; align-items: center; justify-content: center; gap: 40px; padding: 40px; max-width: 1000px; margin: auto; flex-wrap: wrap; }
+.profile-pic { width: 300px; height: auto; border-radius: 12px; object-fit: cover; box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+.about-section div { max-width: 600px; }
+.about-section h1 { font-size: 28px; margin-bottom: 15px; }
+.about-section p { font-size: 18px; line-height: 1.6; color: #444; }
+
+@media (max-width: 900px) {
+  .study-page { padding: 24px; }
+  .course-list { grid-template-columns: 1fr; }
+  .lmu-logo { width: 100px; }
+}
+
+@media (max-width: 480px) {
+  .study-header { flex-direction: column; align-items: flex-start; }
+  .study-page { padding: 18px; }
+}
+
+.lang-switch { text-align: center; margin-bottom: 20px; }
+.site-footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: gray; width: 100%; }

@@ -5,7 +5,7 @@ i18next
     debug: true,
     fallbackLng: 'en',
     backend: {
-      loadPath: '../locales/{{lng}}.json' // ← 路径从 pages/ 下跳出去
+      loadPath: 'locales/{{lng}}.json' // 从站点根目录加载 locales
     }
   }, function(err, t) {
     updateContent();
